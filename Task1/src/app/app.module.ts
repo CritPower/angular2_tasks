@@ -28,8 +28,6 @@ import { HeaderModule, FooterModule } from './core/components';
 import { CoursesComponent } from './pages/courses';
 import { CourseComponent } from './pages/courses';
 // Pages
-import { HomeModule } from './pages/home';
-import { PageOneModule } from './pages/page-one';
 import { PageTwoModule } from './pages/page-two';
 
 // Services
@@ -61,8 +59,6 @@ const APP_PROVIDERS = [
 		RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
 		HeaderModule,
 		FooterModule,
-		HomeModule,
-		PageOneModule,
 		PageTwoModule
 	],
 	providers: [ // expose our Services and Providers into Angular's dependency injection
