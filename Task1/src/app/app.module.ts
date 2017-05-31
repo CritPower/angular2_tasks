@@ -27,18 +27,16 @@ import { NoContentComponent } from './pages/no-content';
 import { HeaderModule, FooterModule } from './core/components';
 import { CoursesComponent } from './pages/courses';
 import { CourseComponent } from './pages/courses';
+import { LoginComponent } from './core/components';
 // Pages
-import { PageTwoModule } from './pages/page-two';
 
 // Services
 
-import { TodoService } from './core/services';
 import { CourseService } from './core/services';
 
 // Application wide providers
 const APP_PROVIDERS = [
-	CourseService,
-	TodoService
+	CourseService
 ];
 
 /**
@@ -50,6 +48,7 @@ const APP_PROVIDERS = [
 		AppComponent,
 		CoursesComponent,
 		CourseComponent,
+		LoginComponent,
 		NoContentComponent
 	],
 	imports: [ // import Angular's modules
@@ -58,8 +57,7 @@ const APP_PROVIDERS = [
 		HttpModule,
 		RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
 		HeaderModule,
-		FooterModule,
-		PageTwoModule
+		FooterModule
 	],
 	providers: [ // expose our Services and Providers into Angular's dependency injection
 		ENV_PROVIDERS,
