@@ -27,7 +27,8 @@ import { NoContentComponent } from './pages/no-content';
 import { HeaderModule, FooterModule } from './core/components';
 import { CoursesComponent } from './pages/courses';
 import { CourseComponent } from './pages/courses';
-import { LoginComponent } from './core/components';
+
+
 // Pages
 
 // Services
@@ -48,7 +49,6 @@ const APP_PROVIDERS = [
 		AppComponent,
 		CoursesComponent,
 		CourseComponent,
-		LoginComponent,
 		NoContentComponent
 	],
 	imports: [ // import Angular's modules
