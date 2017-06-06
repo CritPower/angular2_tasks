@@ -1,12 +1,18 @@
-<nav class="main-navbar">
-	<div class="container">
-		<div>		
-			<img src="/assets/img/logo.svg" alt="Course logo">
-			<span>Logo</span>
-		</div>
-
-	    <span class="menu-item" [routerLink]="'home'" routerLinkActive="active">Courses</span>
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+	<a class="navbar-brand" href="#">
+		<img src="/assets/img/logo.svg" alt="Course logo">
+		<span>HowTo</span>
+  	</a>
+	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+	 aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  	</button>
+	<div class="collapse navbar-collapse" id="navbarNav">
+		<ul class="navbar-nav">
+			<li class="nav-item" routerLinkActive="active">
+				<a class="nav-link" [routerLink]="'home'">Courses</a>
+			</li>
+		</ul>
 	</div>
-
 	<main-login></main-login>
 </nav>

@@ -1,7 +1,9 @@
 <div class="courses-page">
 	<input type="text" placeholder="name fragment or date">
-    <input type="submit" value="Find">
-    <input type="submit" value="Add course">
+	<button type="button" class="btn btn-info">
+			<img src="/assets/img/logo.svg" alt="Course logo">
+		Find</button>
+	<button type="button" class="btn btn-info">Add course</button>
 	<div class="course-list">
 		<course-item *ngFor="let course of courseList" [course]="course"></course-item>
 	</div>
