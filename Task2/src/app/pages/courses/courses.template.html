@@ -3,16 +3,16 @@
 		<div class="coll-sm-4">
 			<div class="input-group">
 				<span class="input-group-addon">How to:</span>
-				<input type="text" class="form-control" placeholder="Name fragment or date" aria-describedby="basic-addon1">
+				<input type="text" class="form-control" [(ngModel)]="searchValue" placeholder="Name fragment or date"  >
 			</div>
 		</div>
 		<div class="coll-sm-8">
-			<button type="button" class="btn btn-info">
-				<span>Find</span>
+			<button type="button" class="btn btn-info" (click)="findCourse()">
+				Find
 			</button>
 			<button type="button" class="btn btn-info add-button">
 				<img class="button-img" src="/assets/img/plus.svg" alt="Course logo">
-				<span>Add course</span>
+				Add course
 			</button>
 		</div>
 	</div>

@@ -1,11 +1,10 @@
-import { Component, ViewEncapsulation, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Course } from '../../../core/entities';
 
 @Component({
 	selector: 'course-item',
 	templateUrl: 'course.template.html',
-	providers: [],
-	encapsulation: ViewEncapsulation.None
+	providers: []
 })
 export class CourseComponent {
 	@Input('course') public course: Course;

@@ -1,11 +1,10 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
 	selector: 'main-header',
 	templateUrl: 'header.component.html',
-	styles: [require('./header.component.scss')],
-	providers: [],
-	encapsulation: ViewEncapsulation.None
+	styleUrls: ['./header.component.scss'],
+	providers: []
 })
 export class HeaderComponent {
 	constructor() {

@@ -1,10 +1,9 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
 	selector: 'main-login',
 	templateUrl: './login.component.html',
-	providers: [],
-	encapsulation: ViewEncapsulation.None
+	providers: []
 })
 export class LoginComponent {
 	constructor() {
