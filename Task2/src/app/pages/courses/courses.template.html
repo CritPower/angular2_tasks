@@ -1,9 +1,21 @@
 <div class="courses-page">
-	<input type="text" placeholder="name fragment or date">
-	<button type="button" class="btn btn-info">
-			<img src="/assets/img/logo.svg" alt="Course logo">
-		Find</button>
-	<button type="button" class="btn btn-info">Add course</button>
+	<div class="courses-menu row">
+		<div class="coll-sm-4">
+			<div class="input-group">
+				<span class="input-group-addon">How to:</span>
+				<input type="text" class="form-control" placeholder="Name fragment or date" aria-describedby="basic-addon1">
+			</div>
+		</div>
+		<div class="coll-sm-8">
+			<button type="button" class="btn btn-info">
+				<span>Find</span>
+			</button>
+			<button type="button" class="btn btn-info add-button">
+				<img class="button-img" src="/assets/img/plus.svg" alt="Course logo">
+				<span>Add course</span>
+			</button>
+		</div>
+	</div>
 	<div class="course-list">
 		<course-item *ngFor="let course of courseList" [course]="course"></course-item>
 	</div>
