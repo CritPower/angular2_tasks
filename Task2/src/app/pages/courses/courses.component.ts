@@ -35,4 +35,13 @@ export class CoursesComponent implements OnInit, OnDestroy {
 	public ngOnDestroy() {
 		this.courseServiceSubscription.unsubscribe();
 	}
+
+	public deleteCourse($event) {
+		this.courseList.forEach((course: Course, index: number) => {
+			if (course.id === $event) {
+				this.courseList.splice(index, 1);
+				console.log('Course with id: ' + $event + ' was deleted!');
+			}
+		});
+	}
 }
