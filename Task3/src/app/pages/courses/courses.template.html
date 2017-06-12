@@ -1,0 +1,23 @@
+<div class="courses-page">
+	<div class="courses-menu row">
+		<div class="coll-sm-4">
+			<div class="input-group">
+				<span class="input-group-addon">How to:</span>
+				<input type="text" class="form-control" [(ngModel)]="searchValue" placeholder="Name fragment or date"  >
+			</div>
+		</div>
+		<div class="coll-sm-8">
+			<button type="button" class="btn btn-info" (click)="findCourse()">
+				Find
+			</button>
+			<button type="button" class="btn btn-info add-button">
+				<img class="button-img" src="/assets/img/plus.svg" alt="Course logo">
+				Add course
+			</button>
+		</div>
+	</div>
+	<div class="course-list">
+		<course-item *ngFor="let course of courseList" [course]="course" (onDelete)="deleteCourse($event)"></course-item>
+	</div>
+	<div *ngIf="isLoading">Is loading...</div>
+</div>

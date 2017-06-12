@@ -1,0 +1,26 @@
+<div class="course-item row rounded">
+	<div class="col-sm-10">
+		<div class="row">
+			<div class="col-sm-4">Video course {{course.id}}</div>
+			<div class="col-sm-4">{{course.duration}}</div>
+			<div class="col-sm-4">{{course.creationDate | date : 'MM/dd/yyyy'}}</div>
+			<div class="row">
+				<div class="col-sm-12">{{course.description}}</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-2">
+		<div class="row">
+			<div class="col-sm-12">
+				<button type="button" class="btn btn-warning">
+				Edit course
+			</button>
+			</div>
+			<div class="col-sm-12">
+				<button type="button" class="btn btn-danger" (click)="deleteCourse()">
+				Delete
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
