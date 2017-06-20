@@ -4,14 +4,14 @@ import { CourseService } from '../../core/services';
 import { Course } from '../../core/entities';
 
 @Component({
-	selector: 'courses',
 	styleUrls: ['./courses.component.scss'],
 	templateUrl: './courses.template.html'
 })
 export class CoursesComponent implements OnInit, OnDestroy {
+	public searchValue: string;
+	public isLoading: boolean;
+
 	private courseList: Course[];
-	private isLoading: boolean;
-	private searchValue: string;
 
 	constructor(private courseService: CourseService) {
 		console.log('Courses page constructor');

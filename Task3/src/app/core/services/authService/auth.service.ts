@@ -1,29 +1,35 @@
 export class AuthService {
 
-    constructor(){
-        
-    }
+	constructor() {
 
-    public login(login: string, password: string) {
-        if (!localStorage.getItem('userLogin')) {
-            localStorage.setItem('userLogin', login);
-            localStorage.setItem('userToken', 'token');
-        }
-    }
+	}
 
-    public logout() {
-        localStorage.clear();
-    }
+	public login(login: string, password: string) {
+		if (localStorage.getItem('userLogin') == null) {
+			localStorage.setItem('userLogin', login);
+			localStorage.setItem('userToken', 'token');
+			console.log('User logged. userLogin: ' + login + ' token:token');
+		} else {
+			console.log('User already logged.');
+		}
+	}
 
-    public isAuthenticated(): boolean {
-        if (localStorage.getItem('userLogin') && localStorage.getItem('useToken')) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+	public logout() {
+		localStorage.clear();
+	}
 
-    public getUserInfo(): string {
-        return localStorage.getItem('userLogin');
-    }
+	public isAuthenticated(): boolean {
+		if (localStorage.getItem('userLogin') != null
+			&& localStorage.getItem('userToken') != null) {
+			console.log('isAuthenticated - true');
+			return true;
+		} else {
+			console.log('isAuthenticated - false');
+			return false;
+		}
+	}
+
+	public getUserInfo(): string {
+		return localStorage.getItem('userLogin');
+	}
 }

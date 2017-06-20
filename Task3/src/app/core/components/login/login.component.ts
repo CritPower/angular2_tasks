@@ -7,21 +7,19 @@ import { BrowserModule } from '@angular/platform-browser';
 	selector: 'main-login',
 	templateUrl: './login.component.html',
 })
-export class LoginComponent {
-	public isAuthenticated: boolean = false;
+export class LoginComponent implements OnInit {
 	public userLogin: string;
+	public authService: AuthService;
 
-	constructor(private authService: AuthService) {
-
+	constructor(authService: AuthService) {
+		this.authService = authService;
 	}
 
 	public ngOnInit() {
 		console.log('HeaderComponent page init');
-		this.isAuthenticated = this.authService.isAuthenticated();
 	}
 
 	public logout() {
 		this.authService.logout();
 	}
 }
-

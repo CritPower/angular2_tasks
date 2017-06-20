@@ -26,10 +26,10 @@ import { NoContentComponent } from './pages/no-content';
 // Components
 import { HeaderModule, FooterModule } from './core/components';
 import { CoursesComponent } from './pages/courses';
-import { CourseComponent } from './pages/courses';
-
 
 // Pages
+import { CourseComponent } from './pages/courses';
+import { LoginPageComponent } from './pages/login';
 
 // Services
 
@@ -50,13 +50,14 @@ const APP_PROVIDERS = [
 		AppComponent,
 		CoursesComponent,
 		CourseComponent,
-		NoContentComponent
+		NoContentComponent,
+		LoginPageComponent
 	],
 	imports: [ // import Angular's modules
 		BrowserModule,
 		FormsModule,
 		HttpModule,
-		RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
+		RouterModule.forRoot(ROUTES, { preloadingStrategy: PreloadAllModules }),
 		HeaderModule,
 		FooterModule
 	],
